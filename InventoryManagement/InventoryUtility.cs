@@ -8,6 +8,7 @@ namespace InventoryManagement
 {
     class InventoryUtility
     {
+        //Create List for Rice , Wheat , Pulse
         public List<Rice> RiceList { get; set; }
         public List<Wheat> WheatList { get; set; }
         public List<Pulse> PulseList { get; set; }
