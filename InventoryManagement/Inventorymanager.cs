@@ -7,6 +7,7 @@ namespace InventoryManagement
 {
     class Inventorymanager : IMethodsManager
     {
+        int totalRate=0;
         //******************DISPLAY*************************
         //To display Rice Items from Json file
         public void DisplayInventory(List<Rice> ricelist)
@@ -15,7 +16,10 @@ namespace InventoryManagement
             foreach (Rice i in ricelist)
             {
                 Console.WriteLine("Name: {0} \nKg: {1} \nPrice: {2} \nType:{3}\n", i.Name, i.Kg, i.Price, i.Type);
+                totalRate += i.Kg * i.Price;
             }
+            Console.WriteLine("Total rate for rice inventory is: {0}", totalRate);
+
 
         }
         //To display Wheat Items from Json file
@@ -26,7 +30,10 @@ namespace InventoryManagement
             foreach (Wheat i in wheatList)
             {
                 Console.WriteLine("Name: {0} \nKg: {1} \nPrice: {2} \nType:{3}\n", i.Name, i.Kg, i.Price, i.Type);
+                totalRate += i.Kg * i.Price;
             }
+            Console.WriteLine("Total rate for wheat inventory is: {0}", totalRate);
+
         }
         //To display Pulse Items from Json file
         public void DisplayInventory(List<Pulse> pulseList)
@@ -36,7 +43,10 @@ namespace InventoryManagement
             foreach (Pulse i in pulseList)
             {
                 Console.WriteLine("Name: {0} \nKg: {1} \nPrice: {2} \nType:{3}\n", i.Name, i.Kg, i.Price, i.Type);
+                totalRate += i.Kg * i.Price; ;
             }
+            Console.WriteLine("Total rate for pulse inventory is: {0}", totalRate);
+
         }
         //***********************ADD To INVENTORY*******************************
         //Add new Rice type
